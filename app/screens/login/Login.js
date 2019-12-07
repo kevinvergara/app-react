@@ -3,7 +3,7 @@ import { authenticationActions } from '../../reducers/authentication/actions'
 import {reducer} from '../../reducers/authentication/index'
 import { connect } from "react-redux";
 import { Container, Header, Content, Card, Item, Text, Body, Title, Button, Label, Input } from 'native-base';
-import type {CombinedState} from "../../reducers";
+import type, {CombinedState} from "../../reducers";
 
 type StateProps = {|
     +tryingToLogin: boolean,
