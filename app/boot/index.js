@@ -4,6 +4,11 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import Login from '../screens/login/index';
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import combinedReducer from "../reducers";
+
+const store = createStore(combinedReducer)
 
 export default class App extends React.Component {
     constructor(props) {
@@ -28,9 +33,11 @@ export default class App extends React.Component {
         }
 
         return (
+            <Provider store={store}>
             <Container style={{paddingTop: 30}}>
                 <Login></Login>
             </Container>
+            </Provider>
         );
     }
 }
