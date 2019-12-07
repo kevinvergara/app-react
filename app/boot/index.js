@@ -1,34 +1,27 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {Images} from "../../assets/index";
-import Image from "react-native-web/dist/exports/Image";
-import TextInput from "react-native-web/src/exports/TextInput";
-import {Button} from "react-native-web";
+import React, { Component, Fragment } from 'react';
+import { StyleSheet, Image, Text, View } from 'react-native';
+import { Images } from "../../assets/index";
 
-export default class Container extends Component<{}, State> {
+export default class Container extends Component {
     render() {
         return (
-        <>
-            <View>
-                <Image uri={Images.IconApp} width={scale(60)} height={scale(60)} />
-            </View>
-            <Text> Login to your Account</Text>
-            <TextInput/>
-            <TextInput/>
-            <Button onPress={} title={}/>
-            <Text> -or sign in with-</Text>
-            <View style={styles.container}>
-                <Text>Hello, world!</Text>
-            </View>
-        </>
-    )};
+            <Fragment>
+                <View style={styles.container}>
+                    <View style={{flex: 1, flexDirection: "row", borderColor: "red", borderWidth: 2}}>
+                        <Image style={{borderWidth: 2, borderColor: 'blue', width: 60, height: 60}} uri={Images.IconApp}/>
+                        <Text>AFAFLM L SMLSMF LAS</Text>
+                    </View>
+                    <Text> Login to your Accsssount</Text>
+                </View>
+            </Fragment>
+        )
+    };
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "column"
     },
 });

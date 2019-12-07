@@ -1,3 +1,3 @@
 export const Images = {
-    IconApp: require('./icon.png'),
+    IconApp: require('../assets/smashicons.jpg'),
 };
